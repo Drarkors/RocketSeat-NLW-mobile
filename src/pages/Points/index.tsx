@@ -1,6 +1,6 @@
 import React from 'react';
 import Constants from 'expo-constants';
-import { View, StyleSheet, Image, Text, ScrollView } from 'react-native';
+import { View, StyleSheet, Image, Text, ScrollView, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Feather as Icon } from "@expo/vector-icons";
@@ -19,10 +19,10 @@ const Points = () => {
     }
 
     return (
-        <>
+        <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>
                 <TouchableOpacity onPress={handleNavigateBack}>
-                    <Icon name="arrow-left" size={24} color="#34cb79" />
+                    <Icon name="arrow-left" size={20} color="#34cb79" />
                 </TouchableOpacity>
 
                 <Text style={styles.title}>Bem-vindo.</Text>
@@ -91,7 +91,7 @@ const Points = () => {
                     </TouchableOpacity>
                 </ScrollView>
             </View>
-        </>
+        </SafeAreaView>
     );
 };
 
